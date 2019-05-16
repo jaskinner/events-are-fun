@@ -110,4 +110,4 @@ gulp.task('sass:watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['js', 'scripts', 'sass', 'sass:watch', 'fafonts', 'elefonts', 'zmdifonts']);
+gulp.task('default', ['js', 'scripts', 'sass', 'fafonts', 'elefonts', 'zmdifonts']);
