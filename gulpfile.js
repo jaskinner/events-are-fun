@@ -30,7 +30,7 @@ function style() {
         .pipe(sass())
         .on("error", sass.logError)
         // Use postcss with autoprefixer and compress the compiled file using cssnano
-        // .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
         // Now add/write the sourcemaps
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.styles.dest))

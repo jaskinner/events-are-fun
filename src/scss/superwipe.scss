@@ -1,0 +1,70 @@
+// VARS
+
+$super-color: white;
+
+// CORE CODE DON'T TOUCH
+
+.superwipe {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: black;
+
+  //   FADE TEXT IN IF DESIRED
+  &.superfade {
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  //   USE DATA-WIPE TO ENTER TEXT INTO SUPERWIPE, DEFAULTS TO CENTER
+  &.supertext {
+
+    &:after {
+      content: attr(data-wipe);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 250ms ease;
+      top: 0;
+      left: 0;
+    }
+
+    &.superleft:after {
+      justify-content: flex-start;
+    }
+
+    &.superright:after {
+      justify-content: flex-end;
+    }
+  }
+
+  // THIS IS THE COLOR BLOCK
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: $super-color;
+  }
+
+  &:before, &:after {
+    transition: all 250ms ease;
+  }
+
+  &:hover {
+    &:before {
+      right: 0;
+    }
+
+    &:after {
+      color: black;
+      opacity: 1;
+    }
+  }
+}
