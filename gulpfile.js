@@ -85,7 +85,11 @@ exports.style = style;
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.parallel(html, style, watch);
+var dev = gulp.parallel(html, style, watch);
+
+var build = gulp.parallel(html, style);
+
+exports.build = build;
 
 /*
  * You can still use `gulp.task` to expose tasks
@@ -95,4 +99,4 @@ var build = gulp.parallel(html, style, watch);
 /*
  * Define default task that can be called by just running `gulp` from cli
  */
-gulp.task('default', build);
+gulp.task('default', dev);
