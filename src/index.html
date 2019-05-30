@@ -41,41 +41,41 @@
 <section class='panel'>
     <h1>BREAKOUT SESSIONS</h1>
     <div class="grid">
-        <div class="grid-section">
+        <div class="grid-section" id="event1">
             <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
             <h2>SECURITY CHAT</h2>
             <p>Presented by: Name Lastname</p>
-            <button id="event1">TICKETS</button>
+            <button>TICKETS</button>
         </div>
-        <div class="grid-section">
+        <div class="grid-section" id="event2">
             <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
             <h2>SECURITY CHAT</h2>
             <p>Presented by: Name Lastname</p>
-            <button id="event2">TICKETS</button>
+            <button>TICKETS</button>
         </div>
-        <div class="grid-section">
+        <div class="grid-section" id="event3">
             <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
             <h2>SECURITY CHAT</h2>
             <p>Presented by: Name Lastname</p>
-            <button id="event3">TICKETS</button>
+            <button>TICKETS</button>
         </div>
-        <div class="grid-section">
+        <div class="grid-section" id="event4">
             <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
             <h2>SECURITY CHAT</h2>
             <p>Presented by: Name Lastname</p>
-            <button id="event4">TICKETS</button>
+            <button>TICKETS</button>
         </div>
-        <div class="grid-section">
+        <div class="grid-section" id="event5">
             <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
             <h2>SECURITY CHAT</h2>
             <p>Presented by: Name Lastname</p>
-            <button id="event5">TICKETS</button>
+            <button>TICKETS</button>
         </div>
-        <div class="grid-section">
+        <div class="grid-section" id="event6">
             <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
             <h2>SECURITY CHAT</h2>
             <p>Presented by: Name Lastname</p>
-            <button id="event6">TICKETS</button>
+            <button>TICKETS</button>
         </div>
     </div>
 
@@ -196,7 +196,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
     (function() {
-        $('.grid-section button').hover(function () {
+        $('.grid-section').hover(function () {
             var btnID = $(this).attr("id"),
                 block = $('.timeblock').find("[data-target='" + btnID + "']");
 
