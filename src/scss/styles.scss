@@ -61,6 +61,7 @@ body * {
 .timeblock {
   position:relative;
   height: 350px;
+  margin-bottom: 120px;
 }
 
 .block {
@@ -118,14 +119,16 @@ body * {
 
 .details {
   height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .detail-panel {
   flex: 0 0 auto;
   opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   -webkit-transition: opacity 250ms;
   -moz-transition: opacity 250ms;
   -ms-transition: opacity 250ms;
