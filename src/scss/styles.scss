@@ -143,3 +143,10 @@ body * {
     opacity: 1;
   }
 }
+
+footer {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

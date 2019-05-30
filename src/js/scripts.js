@@ -1,23 +1,31 @@
-(function() {
-    var highlightBtn = function(elm){
-        $('.block').toggleClass('darken');
-        if(elm) {
-            $(elm).toggleClass('identified');
-        }
-    };
+(function () {
+    var highlightBtn = function (elm) {
+            $('.block').toggleClass('darken');
+            if (elm) {
+                $(elm).toggleClass('identified');
+            }
+        },
+        getElements = function (id) {
+            var elms = {
+                block: $('.timeblock').find("[data-target='" + id + "']"),
+                detail: $('.details').find("[data-details='" + id + "']")
+            };
+            return elms;
+        };
 
     $('.grid-section').hover(function () {
         var btnID = $(this).attr("id"),
-            block = $('.timeblock').find("[data-target='" + btnID + "']");
+            elms = getElements(btnID);
 
-        highlightBtn(block);
+        highlightBtn(elms.block);
+        $(elms.detail).toggleClass('showing');
     });
 
     $('[data-target]').hover(function () {
         var eventID = $(this).data('target'),
-            detail  = $('.details').find("[data-details='" + eventID + "']");
+            elms = getElements(eventID);
 
         highlightBtn($(this));
-        $(detail).toggleClass('showing');
+        $(elms.detail).toggleClass('showing');
     })
 })();
