@@ -12,13 +12,13 @@ var paths = {
         // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
         src: "src/scss/*.scss",
         // Compiled files will end up in whichever folder it's found in (partials are not compiled)
-        dest: "build/css"
+        dest: "dist/css"
     }
 
     // Easily add additional paths
     ,html: {
          src: 'src/*.html',
-         dest: 'build'
+         dest: 'dist'
     }
 };
 
@@ -56,7 +56,7 @@ function watch() {
     browserSync.init({
         // You can tell browserSync to use this directory and serve it as a mini-server
         server: {
-            baseDir: "./build"
+            baseDir: "./dist"
         }
         // If you are already serving your website locally using something like apache
         // You can use the proxy setting to proxy that instead
