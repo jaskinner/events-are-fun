@@ -5,6 +5,7 @@ var gulp = require("gulp"),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     sourcemaps = require("gulp-sourcemaps"),
+    imagemin = require("gulp-imagemin"),
     browserSync = require("browser-sync").create();
 
 var paths = {
@@ -55,6 +56,13 @@ function js() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function img() {
+    return gulp
+        .src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'));
+}
+
 
 // A simple task to reload the page
 function reload() {
@@ -97,9 +105,9 @@ exports.style = style;
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var dev = gulp.parallel(html, style, js, watch);
+var dev = gulp.parallel(html, style, js, img, watch);
 
-var build = gulp.parallel(html, style, js);
+var build = gulp.parallel(html, style, js, img);
 
 exports.build = build;
 
