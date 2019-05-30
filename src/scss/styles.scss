@@ -115,3 +115,24 @@ body * {
     }
   }
 }
+
+.details {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-panel {
+  flex: 0 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -ms-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  transition: opacity 250ms;
+
+  &.showing {
+    opacity: 1;
+  }
+}

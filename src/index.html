@@ -122,6 +122,32 @@
             <div>8PM</div>
         </div>
     </div>
+    <div class="details">
+        <div class="detail-panel" data-details="event1">
+            <h1>event 1</h1>
+            <p>This is the event about security</p>
+        </div>
+        <div class="detail-panel" data-details="event2">
+            <h1>event 2</h1>
+            <p>This is the event about security</p>
+        </div>
+        <div class="detail-panel" data-details="event3">
+            <h1>event 3</h1>
+            <p>This is the event about security</p>
+        </div>
+        <div class="detail-panel" data-details="event4">
+            <h1>event 4</h1>
+            <p>This is the event about security</p>
+        </div>
+        <div class="detail-panel" data-details="event5">
+            <h1>event 5</h1>
+            <p>This is the event about security</p>
+        </div>
+        <div class="detail-panel" data-details="event6">
+            <h1>event 6</h1>
+            <p>This is the event about security</p>
+        </div>
+    </div>
 </section>
 
 <section></section>
@@ -163,6 +189,13 @@
             $('.block').toggleClass('darken');
             $(block).toggleClass('identified');
         });
+
+        $('[data-target]').hover(function () {
+            var eventID = $(this).data('target'),
+                detail  = $('.details').find("[data-details='" + eventID + "']");
+
+            $(detail).toggleClass('showing');
+        })
     })()
 </script>
 </body>
