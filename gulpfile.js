@@ -20,6 +20,11 @@ var paths = {
          src: 'src/*.html',
          dest: 'dist'
     }
+
+    ,scripts: {
+        src: 'src/**/*.js',
+        dest: 'dist'
+    }
 };
 
 function style() {
@@ -41,8 +46,13 @@ function style() {
 function html() {
     return gulp
         .src(paths.html.src)
-        .pipe(gulp.dest(paths.html.dest))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(paths.html.dest));
+}
+
+function js() {
+    return gulp
+        .src(paths.scripts.src)
+        .pipe(gulp.dest(paths.scripts.dest));
 }
 
 
@@ -64,6 +74,7 @@ function watch() {
     });
     gulp.watch(paths.styles.src, style);
     gulp.watch(paths.html.src, html);
+    gulp.watch(paths.scripts.src, js);
     // We should tell gulp which files to watch to trigger the reload
     // This can be html or whatever you're using to develop your website
     // Note -- you can obviously add the path to the Paths object
@@ -76,7 +87,7 @@ function watch() {
 
 
 // Don't forget to expose the task!
-exports.watch = watch
+exports.watch = watch;
 
 // Expose the task by exporting it
 // This allows you to run it from the commandline using
@@ -86,9 +97,9 @@ exports.style = style;
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var dev = gulp.parallel(html, style, watch);
+var dev = gulp.parallel(html, style, js, watch);
 
-var build = gulp.parallel(html, style);
+var build = gulp.parallel(html, style, js);
 
 exports.build = build;
 
