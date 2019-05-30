@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,14 +34,95 @@
         </ul>
     </div>
 </nav>
+<header>
 
-<header class="hero">
-    <div>
-
-    </div>
 </header>
 
-<section></section>
+<section class='panel'>
+    <h1>BREAKOUT SESSIONS</h1>
+    <div class="grid">
+        <div class="grid-section">
+            <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
+            <h2>SECURITY CHAT</h2>
+            <p>Presented by: Name Lastname</p>
+            <button id="event1">TICKETS</button>
+        </div>
+        <div class="grid-section">
+            <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
+            <h2>SECURITY CHAT</h2>
+            <p>Presented by: Name Lastname</p>
+            <button id="event2">TICKETS</button>
+        </div>
+        <div class="grid-section">
+            <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
+            <h2>SECURITY CHAT</h2>
+            <p>Presented by: Name Lastname</p>
+            <button id="event3">TICKETS</button>
+        </div>
+        <div class="grid-section">
+            <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
+            <h2>SECURITY CHAT</h2>
+            <p>Presented by: Name Lastname</p>
+            <button id="event4">TICKETS</button>
+        </div>
+        <div class="grid-section">
+            <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
+            <h2>SECURITY CHAT</h2>
+            <p>Presented by: Name Lastname</p>
+            <button id="event5">TICKETS</button>
+        </div>
+        <div class="grid-section">
+            <time datetime="2019-06-03 10:00">MONDAY, JUNE 3, 2019 10am</time>
+            <h2>SECURITY CHAT</h2>
+            <p>Presented by: Name Lastname</p>
+            <button id="event6">TICKETS</button>
+        </div>
+    </div>
+
+    <div class="timeblock">
+        <div class="block two" style="top:60px;left:40px;" data-target="event1">
+            <p>SECURITY CHAT</p>
+            <time>7am-9am</time>
+        </div>
+        <div class="block one" style="top:120px;left:118px;" data-target="event2">
+            <p>SECURITY CHAT</p>
+            <time>8am-9am</time>
+        </div>
+        <div class="block three" style="top:180px;left:198px;" data-target="event3">
+            <p>SECURITY CHAT</p>
+            <time>7am-9am</time>
+        </div>
+        <div class="block three" style="top:300px;left:356px;" data-target="event4">
+            <p>SECURITY CHAT</p>
+            <time>7am-9am</time>
+        </div>
+        <div class="block three" style="top:240px;left:276px;" data-target="event5">
+            <p>SECURITY CHAT</p>
+            <time>7am-9am</time>
+        </div>
+        <div class="block four" style="top:240px;left:590px;" data-target="event6">
+            <p>SECURITY CHAT</p>
+            <time>7am-9am</time>
+        </div>
+
+        <div class="spacers">
+            <div>7AM</div>
+            <div>8AM</div>
+            <div>9AM</div>
+            <div>10AM</div>
+            <div>11AM</div>
+            <div>12PM</div>
+            <div>1PM</div>
+            <div>2PM</div>
+            <div>3PM</div>
+            <div>4PM</div>
+            <div>5PM</div>
+            <div>6PM</div>
+            <div>7PM</div>
+            <div>8PM</div>
+        </div>
+    </div>
+</section>
 
 <section></section>
 
@@ -82,7 +163,7 @@
             $('.block').toggleClass('darken');
             $(block).toggleClass('identified');
         });
-    }();
+    })()
 </script>
 </body>
 </html>

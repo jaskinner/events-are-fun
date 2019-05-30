@@ -16,10 +16,10 @@ var paths = {
     }
 
     // Easily add additional paths
-    // ,html: {
-    //  src: '...',
-    //  dest: '...'
-    // }
+    ,html: {
+         src: 'src/*.html',
+         dest: 'build'
+    }
 };
 
 function style() {
@@ -38,7 +38,12 @@ function style() {
         .pipe(browserSync.stream());
 }
 
-
+function html() {
+    return gulp
+        .src(paths.html.src)
+        .pipe(gulp.dest(paths.html.dest))
+        .pipe(browserSync.stream());
+}
 
 
 // A simple task to reload the page
@@ -80,7 +85,7 @@ exports.style = style;
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.parallel(style, watch);
+var build = gulp.parallel(html, style, watch);
 
 /*
  * You can still use `gulp.task` to expose tasks
