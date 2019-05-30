@@ -57,9 +57,6 @@ body * {
     width: 120px;
     background-color: $primary-color;
   }
-  //&:hover {
-  //  background-color: grey;
-  //}
 }
 
 .timeblock {
@@ -88,7 +85,13 @@ body * {
     opacity: 1;
   }
 
-  p {font-size: 12px;}
+  p {
+    font-size: 12px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   time {
     color: black;
