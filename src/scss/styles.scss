@@ -64,7 +64,7 @@ body * {
 
 .grid-section {
   flex: 0 0 auto;
-  margin: 2rem;
+  margin: 0.5rem 2rem;
   width: 200px;
   transition: background-color 250ms ease;
   h2 {color: $primary-color;}
@@ -103,12 +103,10 @@ body * {
   transition: opacity 250ms ease;
 
   &.darken {
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
-  &.identified {
-    opacity: 1;
-  }
+
 
   p {
     font-size: 12px;
@@ -166,10 +164,6 @@ body * {
   -ms-transition: opacity 250ms;
   -o-transition: opacity 250ms;
   transition: opacity 250ms;
-
-  &.showing {
-    opacity: 1;
-  }
 }
 
 footer {
@@ -179,7 +173,9 @@ footer {
   align-items: center;
 }
 
-
+.showing {
+  opacity: 1!important;
+}
 
 @media (min-width: 768px){
   .hero {
